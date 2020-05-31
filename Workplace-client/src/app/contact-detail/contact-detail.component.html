@@ -1,0 +1,21 @@
+<h1 class="display-2">{{ person.name }}</h1>
+<dl class="row">
+  <dt class="col-sm-3">Departments</dt>
+  <table class="table">
+    <tbody>
+    <tr>
+        <td *ngFor="let department of person.departments">{{ department.department }}</td>
+    </tr>
+    </tbody>  
+    </table>
+    <dt class="col-sm-3">Contacts</dt>
+    <table class="table">
+        <tbody>
+        <tr *ngFor="let contact of person.contacts">
+            <td>{{ contact.contactType }}</td>
+            <td>{{ contact.contact }}</td>
+        </tr>
+    </tbody> 
+    </table>
+</dl>
+<button mat-raised-button routerLink="/persons">Back</button>

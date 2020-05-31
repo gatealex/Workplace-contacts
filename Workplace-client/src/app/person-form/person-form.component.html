@@ -1,0 +1,65 @@
+<form (submit)="submit(personForm)" #personForm="ngForm">
+    <div class="form-group">
+      <mat-form-field>
+        <input name="name"
+              [(ngModel)]="model.name"
+               matInput type="text"
+               aria-describedby="nameHelp"
+               placeholder="Enter name"
+               required 
+              #name="ngModel"
+              >
+        </mat-form-field>
+        <mat-error *ngIf="name.invalid && (name.dirty || name.touched) && name.errors.required">
+            Name is required!
+        </mat-error>
+    </div>
+    <!--<div class="form-group">
+        
+        <mat-form-field>
+            <mat-label>Department</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let department of departments" [value]="department" >
+                    {{department}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>-->
+
+      <div class="form-group">
+        <mat-form-field>
+          <input
+            name="department"
+            [(ngModel)]="model.departments"
+            matInput type="text"
+            aria-describedby="locationHelp"
+            placeholder="Enter location"
+            required 
+            #department="ngModel">
+        </mat-form-field>
+        <mat-error *ngIf="department.invalid && (department.dirty || department.touched) && department.errors.required">
+            Location is required!
+        </mat-error>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <input
+            name="contact"
+            [(ngModel)]="model.contacts"
+            matInput type="text"
+            aria-describedby="locationHelp"
+            placeholder="Enter location"
+            required 
+            #contact="ngModel">
+        </mat-form-field>
+        <mat-error *ngIf="contact.invalid && (contact.dirty || contact.touched) && contact.errors.required">
+            Location is required!
+        </mat-error>
+      </div>
+
+      
+      
+    
+    <button [disabled]="!personForm.valid" type="submit" mat-raised-button >Save person</button>
+  </form>

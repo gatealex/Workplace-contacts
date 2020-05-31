@@ -1,0 +1,8 @@
+<mat-button-toggle-group (change)="onFilterChange(group.value)" [value]="selectedDepartment" #group="matButtonToggleGroup">
+    <mat-button-toggle value="">
+        <mat-icon>add</mat-icon>
+    </mat-button-toggle>
+    <mat-button-toggle value="{{status}}"  *ngFor="let status of departments">
+      {{ status }}
+    </mat-button-toggle>
+ </mat-button-toggle-group>

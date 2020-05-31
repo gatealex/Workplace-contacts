@@ -1,0 +1,25 @@
+.bigfont{
+    color: rgb(110, 102, 102); 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 2em; font-weight: bold; 
+    letter-spacing: -2px; 
+    margin-left: 10px;
+}
+
+.table{
+    line-height:0.75;
+    margin-left: 10px;
+    margin-right: 10px;
+    white-space: unset !important;
+    width: 100% !important;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+a{
+    color:rgb(116, 19, 19);
+}
+
+.table-info, .table-info > td, .table-info > th{
+    background-color: rgb(231, 121, 121);
+}

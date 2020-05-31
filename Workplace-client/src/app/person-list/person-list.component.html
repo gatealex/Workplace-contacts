@@ -1,0 +1,35 @@
+<h1 class="bigfont">People contact list</h1>
+<app-department-filter [department]="selectedDepartment" (onChange)="onFilterChange($event)"></app-department-filter>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Contact</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let person of filteredPerson; let i=index" (click)="onSelectPerson(person)" [class.table-info]="person === selectedPerson">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ person.name }}</td>
+        <td >
+            {{ mergedDepartments[person.id-1] }}
+        </td>
+        <td>
+            <a [routerLink]="['/persons', person.id]">
+                <mat-icon>contact_phone</mat-icon>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<button mat-raised-button (click)="onNewClick()">Add person</button>
+<div class="row">
+    <div class="col" *ngIf="selectedPerson">
+      <app-person-form [person]="selectedPerson" (onSubmit)="onFormSubmit($event)"></app-person-form>
+    </div>
+  </div>
+
+
+  

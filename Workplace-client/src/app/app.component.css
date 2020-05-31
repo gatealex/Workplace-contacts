@@ -1,0 +1,7 @@
+.mat-toolbar.mat-warn{
+    background: #661020;
+}
+.mat-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button {
+    font-size: large;
+    font-style: normal;
+}

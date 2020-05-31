@@ -1,0 +1,22 @@
+.table{
+    line-height:0.75;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 50%;
+}
+
+.row{
+    display: contents;
+}
+
+.table td{
+    vertical-align: bottom;
+}
+
+.display-2{
+    margin-left: 10px;
+}
+
+.mat-raised-button{
+    margin-left: 10px;
+}

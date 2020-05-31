@@ -1,0 +1,22 @@
+<mat-toolbar color="warn">
+<button mat-button href="/">
+    <mat-icon>phone</mat-icon>
+    Workplace Contacts
+</button>
+<span class="fill-remaining-space" fxHide="false" fxHide.gt-sm></span>
+<div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button href="/persons" routerLink="/persons">Contacts</button>
+    <button mat-button href="/persons/add" routerLink="/persons/new">New Contacts</button>
+</div>
+</mat-toolbar>
+<!--
+<button mat-icon-button [matMenuTriggerFor]="menu" fxHide="true" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+</button>
+</mat-toolbar>
+<mat-menu xPosition="before" #menu="matMenu">
+    <button mat-menu-item href="/issues">Contacts</button>
+    <button mat-menu-item href="/issues/add">New Contacts</button>
+</mat-menu>
+--->
+<router-outlet></router-outlet>
