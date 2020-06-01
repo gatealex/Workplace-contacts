@@ -40,6 +40,7 @@ insert into department_people (departments_id, people_id) values (5,3);
 insert into department_people (departments_id, people_id) values (1,4);
 insert into department_people (departments_id, people_id) values (2,5);
 insert into department_people (departments_id, people_id) values (5,5);
+insert into department_people (departments_id, people_id) values (1,6);
 
 
 insert into Admin (username, password) values ('beluci111', '$2a$10$i8PSkVr/QMgGesJAUmbfOubvj3nlb5osOE5bPJFOLxbN1b6c8pTm.');

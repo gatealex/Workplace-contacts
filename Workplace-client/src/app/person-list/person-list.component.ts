@@ -33,13 +33,25 @@ export class PersonListComponent implements OnInit {
   }
 
   addDepToPerson(){
+    //console.log(this.departments[0].people[0]);
+    this.persons.forEach(person => {
+      person.departments = [];
+    });
+    
+
     this.departments.forEach(department => {
-      department.persons.forEach(person => {
-        this.persons[person.id].departments.push(department);
-        console.log( this.persons[person.id].departments);
+      department.people.forEach(person => {
+        console.log( person.id);
+        console.log(department);
+        this.persons[person.id-1].departments.push(department);
+        console.log( this.persons[person.id-1].departments);
       });
     });
+    console.log("this");
+    console.log(this.persons);
+    
   }
+
   onFilterChange(department: string) {
     this.selectedDepartment = department;
     this.filter();
@@ -55,7 +67,7 @@ export class PersonListComponent implements OnInit {
   filterByDepartment(person){
     let found = false;
     person.departments.forEach(d => {
-      if (d.department === (this.selectedDepartment)){
+      if (d.name === (this.selectedDepartment)){
         return found = true;
       }
     }); 
@@ -68,11 +80,11 @@ export class PersonListComponent implements OnInit {
         if(person.departments.length > 1){
           person.departments.forEach((department,index) => {
             if(index!=0)
-              concatDepartment = concatDepartment.concat("-",department.department);
-            else concatDepartment = person.departments[0].department;
+              concatDepartment = concatDepartment.concat("-",department.name);
+            else concatDepartment = person.departments[0].name;
           });
       } else {
-        concatDepartment = person.departments[0].department;
+        concatDepartment = person.departments[0].name;
       }
       this.mergedDepartments.push(concatDepartment);
     });
