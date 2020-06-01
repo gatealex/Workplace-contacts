@@ -28,7 +28,7 @@ export class ContactDetailComponent implements OnInit {
   async ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
     this.persons = await this.personService.getPersons();
-    this.person = this.persons[id];
+    this.person = this.persons[id-1];
 
   }
 
