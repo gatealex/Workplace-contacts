@@ -7,3 +7,4 @@ Feladat egy nagyobb cég alkalmazottainak az elérhetőségi adatainak a kezelé
 ## Beadandórészek dokumentációi 
 - [Projektötlet](Documentation/projectotlet.md)
 - [Backend megvalósítása](Documentation/backend.md)
+- [Frontend megvalósítása](Documentation/frontend.md)
